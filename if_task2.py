@@ -6,4 +6,16 @@
 #Вызвать функцию несколько раз, передавая ей разные параметры и выводя на экран результаты
 
 def compare_strings(string1, string2):
-    
+    if type(string1) == str and type(string2) == str:
+#        print('Это строки!')
+        if string1 == string2:
+            return 1
+        elif len(string1) > len(string2):
+            return 2
+        elif string1 != string2 and string2 == 'learn':    
+            return 3
+    else:
+        return 0
+
+compare = compare_strings('learn',3)
+print(compare)
