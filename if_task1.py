@@ -3,18 +3,18 @@
 #Вызвать функцию, передав ей возраст пользователя, и положить результат работы функции в переменную
 #Вывести содержимое переменной на экран
 
-user_input = input('Введите ваш возраст:')
+int_user_input = int(input('Введите ваш возраст:'))
 
-def define_occupation(user_input):
-    if int(user_input) <= 6:
+def define_occupation(int_user_input):
+    if int_user_input <= 6:
         result = 'иди в детский сад'
-    elif 7 <= int(user_input) <= 17:
+    elif 7 <= int_user_input <= 17:
         result = 'иди в школу'
-    elif 17 < int(user_input) <= 21:
+    elif 17 < int_user_input <= 21:
         result = 'иди в  универ'
     else: 
         result = 'иди работай'
     return result
 
-occupation = define_occupation(user_input)
+occupation = define_occupation(int_user_input)
 print(occupation)
