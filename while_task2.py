@@ -20,4 +20,3 @@ def ask_user(input_question):
 
 
 ask_user(input_question)
-# q_and_a.get('input_question')
