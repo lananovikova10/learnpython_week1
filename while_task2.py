@@ -6,17 +6,15 @@
 
 q_and_a = {'Как дела': 'Пока не родила!',
            'Что делаешь': 'Сплю', 'Часто тут бываешь': 'Нет'}
-input_question = input('Введите вопрос ')
 
-
-def ask_user(input_question):
+def ask_user():
     while True:
-        if input_question in q_and_a:
-            print(q_and_a[input_question])
-            return True
+        input_question = input('Введите вопрос ')
+        if q_and_a.get(input_question):
+            print(q_and_a.get(input_question))
+            pass
         else:
             print('я такого вопроса не знаю')
             return False
 
-
-ask_user(input_question)
+ask_user()
