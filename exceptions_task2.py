@@ -8,19 +8,19 @@ def discounted(price, discount, max_discount=20):
         price = float(abs(price))
         discount = float(abs(discount))
         max_discount = int(abs(max_discount))
-    except TypeError:
+    except (TypeError, ValueError):
         print('Не удалось привести типы')
-        exit()
+        return None
 
     try:
         if max_discount >= 100:
             raise ValueError
-        if discount >= max_discount:
-            return price
-        else:
-            return price - (price * discount / 100)
     except ValueError:
         print('Слишком большая максимальная скидка')
+    if discount >= max_discount:
+        return price
+    else:
+        return price - (price * discount / 100)
 
-discounted('1000', 50, -20)
+discounted('fvfvfv', 50, 200)
 
